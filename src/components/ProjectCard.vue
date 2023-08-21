@@ -3,9 +3,9 @@
   import axios from 'axios';
 
   export default {
-    name: 'HelloWorld',
+    name: 'Projects',
     mounted (){
-      axios.get('http://localhost:8000/api/api')
+      axios.get('http://localhost:8000/api/Project-index')
         .then(response => {
           const data = response.data;
           console.log(data);
@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  
+  Ciao
 </template>
 
 <style>
