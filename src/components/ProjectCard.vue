@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  Ciao
+  
 </template>
 
 <style>
