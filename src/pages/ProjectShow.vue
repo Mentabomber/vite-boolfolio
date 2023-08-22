@@ -14,7 +14,7 @@ export default {
 
         const projectId = this.$route.params.id;
 
-        axios.get(API_URL + '/Project-index/' + projectId)
+        axios.get(API_URL + '/Project-show/' + projectId)
              .then(res => this.project = res.data.project)
              .catch(err => console.error(err));
     }
@@ -25,5 +25,8 @@ export default {
     <p>description: {{ project.description }}</p>
     <p>manager: {{ project.project_manager }}</p>
     <img :src="project.thumb" alt="">
+    <h4>Go to 
+        <router-link :to="{ name: 'home' }">HOME</router-link>
+    </h4>
 </template>
 
