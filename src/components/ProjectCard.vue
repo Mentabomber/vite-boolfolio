@@ -26,7 +26,7 @@
       Go to  
       <router-link
       :to="{ 
-          name: 'Project-show',
+          name: 'Project-index',
           params: { id: project.id }
       }"
       >

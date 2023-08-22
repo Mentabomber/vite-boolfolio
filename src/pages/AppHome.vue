@@ -4,7 +4,7 @@ import axios from 'axios';
 import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
-  name: 'Projects',
+  name: 'AppHome',
   components: {
     ProjectCard
   },
@@ -14,30 +14,30 @@ export default {
       pages: []
     }
     },
-  methods:{ loadPage(target) {
+  methods:{ 
+    loadPage(target) {
 
     if (target == null) return;
 
     this.loadProjects(target);
-  },
-  loadProjects(target) {
-    axios.get(target)
-     .then(response => {
+    },
+    loadProjects(target) {
+        axios.get(target)
+        .then(response => {
 
-        const data = response.data;
-        // console.log(data);
+            const data = response.data;
+            // console.log(data);
 
-        this.projects = data.projects.data;
-        this.pages = data.projects.links;
-      })
-      .catch(error => {
-        console.log(error);
-       });
-}
+            this.projects = data.projects.data;
+            this.pages = data.projects.links;
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }   
 },
 mounted (){
-
-  this.loadProjects('http://localhost:8000/api/Project-index');
+    this.loadProjects('http://localhost:8000/api/Project-index');
 }
 }
 </script>

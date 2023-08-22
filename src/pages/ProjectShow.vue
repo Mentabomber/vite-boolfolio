@@ -14,7 +14,7 @@ export default {
 
         const projectId = this.$route.params.id;
 
-        axios.get(API_URL + '/Project-show/' + projectId)
+        axios.get(API_URL + '/Project-index/' + projectId)
              .then(res => this.project = res.data.project)
              .catch(err => console.error(err));
     }
