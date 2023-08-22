@@ -14,14 +14,22 @@
 </script>
 
 <template>
-   <div class="col-1 border"> {{ project.title }} <span>
-    {{ project.description }}
+   <div class="card col-2 border justify-content-between"> 
+    <h3>
+      {{ project.title }} 
+    </h3>
+    <span>
+      {{ project.description }}
     </span>
+    <br><br>
+    <span>Go to About </span>
    </div>
 </template>
 
 <style>
 .card{
-  width: 250px;
+
+  padding: 10px;
 }
+
 </style>

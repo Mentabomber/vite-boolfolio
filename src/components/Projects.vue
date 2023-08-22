@@ -50,14 +50,6 @@ mounted (){
     <ProjectCard  v-for="project in projects" :key="project.id" :project="project"/>
 
   </div>
-  <!-- <ul>
-    <li v-for="project in projects" :key="project.id">
-      <a href="">{{ project.id }} {{ project.title }}</a>
-
-
-      
-    </li>
-  </ul> -->
 
   <div class="pages row justify-content-center cursor-pointer">
         <div v-for="(page, index) in pages"
