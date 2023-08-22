@@ -3,24 +3,25 @@
   import axios from 'axios';
 
   export default {
-    name: 'Projects',
-    mounted (){
-      axios.get('http://localhost:8000/api/Project-index')
-        .then(response => {
-          const data = response.data;
-          console.log(data);
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
+    name: 'ProjectCard',
+    props: {
+      project: {
+        type: Object,
+        required: true
+      }
+    },
   }
 </script>
 
 <template>
-  
+   <div class="col-1 border"> {{ project.title }} <span>
+    {{ project.description }}
+    </span>
+   </div>
 </template>
 
 <style>
-
+.card{
+  width: 250px;
+}
 </style>
