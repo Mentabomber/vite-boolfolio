@@ -1,14 +1,7 @@
-<template>
-    <h1>{{ project.title }}</h1>
-    <p>code: {{ project.description }}</p>
-    <p>weight: {{ project.project_manager }}</p>
-    <img :src="project.thumb" alt="">
-</template>
-
 <script>
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/v1';
+const API_URL = 'http://localhost:8000/api';
 
 export default {
     name: 'ProjectShow',
@@ -21,9 +14,16 @@ export default {
 
         const projectId = this.$route.params.id;
 
-        axios.get(API_URL + '/project-show/' + projectId)
+        axios.get(API_URL + '/Project-show/' + projectId)
              .then(res => this.project = res.data.project)
              .catch(err => console.error(err));
     }
 }
 </script>
+<template>
+    <h1>{{ project.title }}</h1>
+    <p>description: {{ project.description }}</p>
+    <p>manager: {{ project.project_manager }}</p>
+    <img :src="project.thumb" alt="">
+</template>
+

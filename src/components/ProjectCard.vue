@@ -1,6 +1,6 @@
 <script>
 
-  import axios from 'axios';
+  // import axios from 'axios';
 
   export default {
     name: 'ProjectCard',
@@ -22,7 +22,17 @@
       {{ project.description }}
     </span>
     <br><br>
-    <span>Go to About </span>
+    <span>
+      Go to  
+      <router-link
+      :to="{ 
+          name: 'Project-show',
+          params: { id: project.id }
+      }"
+      >
+      Project
+    </router-link></span>
+   
    </div>
 </template>
 
