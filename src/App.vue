@@ -5,6 +5,9 @@ import Projects from './components/Projects.vue';
 <template>
 
   <Projects />
+  <router-view></router-view>
+  
+
 </template>
 
 <style >
