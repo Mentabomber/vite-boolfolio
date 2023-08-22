@@ -25,8 +25,8 @@ export default {
     <p>description: {{ project.description }}</p>
     <p>manager: {{ project.project_manager }}</p>
     <img :src="project.thumb" alt="">
-    <!-- <span>Project type: {{ types.name }}</span>
-    <span>Project technology: {{ project.technology.id }}</span> -->
+    <span>Project type: {{ project.type.name }}</span>
+    <span>Project technology: {{ project.technologies.name }}</span>
     <h4>Go to 
         <router-link :to="{ name: 'home' }">HOME</router-link>
     </h4>
